@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnTKPMNC", "DoAnTKPMNC.csproj", "{8FCAA508-77D1-4DB9-862E-38AE1F926153}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FCAA508-77D1-4DB9-862E-38AE1F926153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCAA508-77D1-4DB9-862E-38AE1F926153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCAA508-77D1-4DB9-862E-38AE1F926153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCAA508-77D1-4DB9-862E-38AE1F926153}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66F0C76E-8596-4785-895F-7CE5FF386F8A}
+	EndGlobalSection
+EndGlobal
