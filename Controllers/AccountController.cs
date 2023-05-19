@@ -81,8 +81,19 @@ namespace DoAnTKPMNC.Controllers
 
         // DELETE api/<AccountController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var account = _context.Accounts.FirstOrDefault(a=>a.AccountId==id&&a.IsDeleted==false);
+            if(account == null )
+            {
+                return NotFound();
+            }
+            else
+            {
+                account.IsDeleted=true;
+                _context.SaveChanges();
+                return Ok();
+            }
         }
     }
 }
