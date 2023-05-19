@@ -36,7 +36,7 @@ namespace DoAnTKPMNC.Controllers
         }
 
         // POST api/<AccountController>
-        [NonAction]
+        [HttpPost]
         public Account Post(AccountModel accountMd, int roleId)
         {
             Account account = new Account();
