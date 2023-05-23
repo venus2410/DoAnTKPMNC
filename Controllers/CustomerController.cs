@@ -49,6 +49,10 @@ namespace DoAnTKPMNC.Controllers
             {
                 AccountController accountController = new AccountController(_context);
                 var account = accountController.Post(customerModel.Account, 3);
+                if (account == null)
+                {
+                    return BadRequest("username already exist");
+                }
 
                 Customer customer = new Customer();
                 customer.CustomerId=NextCustomerId();
@@ -78,7 +82,7 @@ namespace DoAnTKPMNC.Controllers
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put()
         {
         }
 

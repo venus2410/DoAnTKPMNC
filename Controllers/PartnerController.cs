@@ -60,6 +60,10 @@ namespace DoAnTKPMNC.Controllers
                 _context.Accounts.Add(account);*/
                 AccountController accountController = new AccountController(_context);
                 var account = accountController.Post(partnerModel.AccountModel, 2);
+                if (account == null)
+                {
+                    return BadRequest("username already exist");
+                }
 
                 Partner partner = new();
                 partner.PartnerId = NextPartnerId();
@@ -86,7 +90,7 @@ namespace DoAnTKPMNC.Controllers
         }
         private int NextPartnerId()
         {
-            return _context.Partners.Max(s => s.PartnerId) + 1;
+            return _context.Partners.Count() + 1;
         }
 
         // PUT api/<PartnerController>/5

@@ -18,6 +18,11 @@ namespace DoAnTKPMNC.Controllers
         }
         // GET: api/<AccountController>
         [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_context.Accounts.ToList());
+        }
+        [HttpGet]
         public IActionResult Get(int id)
         {
             try
@@ -36,9 +41,14 @@ namespace DoAnTKPMNC.Controllers
         }
 
         // POST api/<AccountController>
-        [HttpPost]
+        [NonAction]
         public Account Post(AccountModel accountMd, int roleId)
         {
+            var isExist=_context.Accounts.FirstOrDefault(a=>a.UserName==accountMd.UserName);
+            if(isExist != null)
+            {
+                return null;
+            }
             Account account = new Account();
             int accid = NextAccountId();
             account.AccountId = accid;

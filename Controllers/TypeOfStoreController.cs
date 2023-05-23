@@ -26,7 +26,7 @@ namespace DoAnTKPMNC.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var typeOfStore= _context.TypeOfStores.FirstOrDefault(s=>s.Equals(id));
+            var typeOfStore= _context.TypeOfStores.FirstOrDefault(s=>s.TypeId==id);
             if (typeOfStore == null)
             {
                 return NotFound();

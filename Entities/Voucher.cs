@@ -16,6 +16,7 @@ namespace DoAnTKPMNC.Entities
         public bool? Vnd { get; set; }
         public int Value { get; set; }
         public bool? IsDeleted { get; set; }
+        public string? ImgUrl { get; set; }
 
         public virtual Store? Store { get; set; }
         public virtual ICollection<CampaignVoucher> CampaignVouchers { get; set; }
