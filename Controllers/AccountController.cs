@@ -22,7 +22,7 @@ namespace DoAnTKPMNC.Controllers
         {
             return Ok(_context.Accounts.ToList());
         }
-        [HttpGet]
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             try
