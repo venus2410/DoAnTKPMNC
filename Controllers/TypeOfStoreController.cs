@@ -54,16 +54,16 @@ namespace DoAnTKPMNC.Controllers
         {
             if (_context.TypeOfStores.Count() <= 0) return 0;
             return _context.TypeOfStores.Max(s => s.TypeId) + 1;
-        } 
+        }
 
         // PUT api/<TypeOfStoreController>/5
-        [HttpPut("{id}")]
+        [NonAction]
         public void Put(int id, [FromBody] string value)
         {
         }
 
         // DELETE api/<TypeOfStoreController>/5
-        [HttpDelete("{id}")]
+        [NonAction]
         public void Delete(int id)
         {
         }

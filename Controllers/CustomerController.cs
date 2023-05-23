@@ -81,13 +81,13 @@ namespace DoAnTKPMNC.Controllers
         }
 
         // PUT api/<CustomerController>/5
-        [HttpPut("{id}")]
+        [NonAction]
         public void Put()
         {
         }
 
         // DELETE api/<CustomerController>/5
-        [HttpDelete("{id}")]
+        [NonAction]
         public void Delete(int id)
         {
         }
