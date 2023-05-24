@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace DoAnTKPMNC.Entities
 {
-    public partial class cdtkpmncdbContext : DbContext
+    public partial class cdtkpmncdbContext : IdentityDbContext<ApplicationUser>
     {
         public cdtkpmncdbContext()
         {
